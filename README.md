@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Start by creating the components folder then create MyComponent and StateTracker
 
-## Available Scripts
+2. Then build out the StateTracker component explaining what its doing
 
-In the project directory, you can run:
+- class that keeps its own state and methods 
 
-### `npm start`
+- it's concerned with handlechange and updating state and we have a name value set
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- it returns this.props.render invoked and passes through an object as the argument
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+3. now build out MyComponent 
 
-### `npm test`
+- show that the function takes in props but renders out stateTracker.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- we pass a render props whose value is a function that returns some jsx 
 
-### `npm run build`
+- when state tracker returns its object we can access any values on that object we want to in the return of the render props function in MyComponent. We can also access any props values we want from where wer render out my component in app.js 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Lastly render out MyComponent with a title prop in App.js
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+5. create Filter and People components in the component folder 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. build out people showing that you're creating an array and explain this could fetch from an api or the browser cache 
 
-### `npm run eject`
+- the class will set up some original state people and original people 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- it creates a method set people that will set state and then renders out this.props invoked passing through an object with methods and values 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. build out Filter.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- export default the wrapper function and explain that it allows us to access all of the values from the People component render and then pass those values on to Filter so it can access it in class Methods 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- then build out filter explaining it's basically the same as the hoc example
